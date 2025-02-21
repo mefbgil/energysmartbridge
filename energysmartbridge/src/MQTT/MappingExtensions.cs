@@ -74,7 +74,7 @@ namespace EnergySmartBridge.MQTT
             return ret;
         }
 
-        public static BinarySensor ToAirFilterStatusConfig(this WaterHeaterInput waterHeater)
+/*        public static BinarySensor ToAirFilterStatusConfig(this WaterHeaterInput waterHeater)
         {
             BinarySensor ret = new BinarySensor
             {
@@ -95,7 +95,7 @@ namespace EnergySmartBridge.MQTT
             };
             return ret;
         }
-
+*/
         public static BinarySensor ToLeakDetectConfig(this WaterHeaterInput waterHeater)
         {
             BinarySensor ret = new BinarySensor
@@ -209,7 +209,7 @@ namespace EnergySmartBridge.MQTT
             };
             return ret;
         }
-
+/*
         public static Sensor ToCompSensorFailConfig(this WaterHeaterInput waterHeater)
         {
             Sensor ret = new Sensor
@@ -242,7 +242,7 @@ namespace EnergySmartBridge.MQTT
             };
             return ret;
         }
-
+*/
        public static Sensor ToFaultCodesConfig(this WaterHeaterInput waterHeater)
         {
             Sensor ret = new Sensor
