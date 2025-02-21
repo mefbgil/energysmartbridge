@@ -281,13 +281,13 @@ namespace EnergySmartBridge.Modules
 
             string ha_mode = "off";
             switch(waterHeater.Mode) {
-                case "Efficiency":
+                case "EnergySmart":
                     ha_mode = "heat_pump";
                     break;
-                case "Hybrid":
-                    ha_mode = "eco";
+                case "Vacation":
+                    ha_mode = "off";
                     break;
-                case "Electric":
+                case "Standard":
                     ha_mode = "electric";
                     break;
                 default:
