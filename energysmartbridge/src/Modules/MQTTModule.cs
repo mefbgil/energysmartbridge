@@ -148,13 +148,13 @@ namespace EnergySmartBridge.Modules
                     string heater_mode = "off";
                     switch(payload) {
                         case "heat_pump":
-                            heater_mode = "Efficiency";
+                            heater_mode = "EnergySmart";
                             break;
                         case "eco":
-                            heater_mode = "Hybrid";
+                            heater_mode = "Vacation";
                             break;
                         case "electric":
-                            heater_mode = "Electric";
+                            heater_mode = "Standard";
                             break;
                         default:
                             break;
