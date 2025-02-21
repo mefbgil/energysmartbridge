@@ -1,7 +1,7 @@
 FROM mono:latest AS build
 
 WORKDIR /build
-RUN cd /build && git clone https://github.com/mefbgil/energysmartbridge.git
+RUN git clone https://github.com/mefbgil/energysmartbridge.git
 RUN nuget restore /build/EnergySmartBridge.sln
 RUN msbuild /build/EnergySmartBridge.sln /t:Build /p:Configuration=Release
 RUN mv /build/bin/Release /app
