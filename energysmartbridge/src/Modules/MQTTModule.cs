@@ -221,13 +221,13 @@ namespace EnergySmartBridge.Modules
             
             PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/grid/config",
                 JsonConvert.SerializeObject(waterHeater.ToGridConfig()));
-
+/*
             PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/airfilterstatus/config",
                 JsonConvert.SerializeObject(waterHeater.ToAirFilterStatusConfig()));
 
             PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/condensepumpfail/config",
                 JsonConvert.SerializeObject(waterHeater.ToCondensePumpFailConfig()));
-
+*/
             PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/leakdetect/config",
                 JsonConvert.SerializeObject(waterHeater.ToLeakDetectConfig()));
 
@@ -260,7 +260,7 @@ namespace EnergySmartBridge.Modules
 
             PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/masterdispfail/config",
                 JsonConvert.SerializeObject(waterHeater.ToMasterDispFailConfig()));
-
+/*
             PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/compsensorfail/config",
                 JsonConvert.SerializeObject(waterHeater.ToCompSensorFailConfig()));
 
@@ -269,7 +269,7 @@ namespace EnergySmartBridge.Modules
 
             PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/systemfail/config",
                 JsonConvert.SerializeObject(waterHeater.ToSystemFailConfig()));
-
+*/
             PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/faultcodes/config",
                 JsonConvert.SerializeObject(waterHeater.ToFaultCodesConfig()));
         }
