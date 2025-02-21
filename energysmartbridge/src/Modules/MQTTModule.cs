@@ -221,13 +221,7 @@ namespace EnergySmartBridge.Modules
             
             PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/grid/config",
                 JsonConvert.SerializeObject(waterHeater.ToGridConfig()));
-/*
-            PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/airfilterstatus/config",
-                JsonConvert.SerializeObject(waterHeater.ToAirFilterStatusConfig()));
 
-            PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/condensepumpfail/config",
-                JsonConvert.SerializeObject(waterHeater.ToCondensePumpFailConfig()));
-*/
             PublishAsync($"{Global.mqtt_discovery_prefix}/binary_sensor/{waterHeater.DeviceText}/leakdetect/config",
                 JsonConvert.SerializeObject(waterHeater.ToLeakDetectConfig()));
 
@@ -260,16 +254,7 @@ namespace EnergySmartBridge.Modules
 
             PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/masterdispfail/config",
                 JsonConvert.SerializeObject(waterHeater.ToMasterDispFailConfig()));
-/*
-            PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/compsensorfail/config",
-                JsonConvert.SerializeObject(waterHeater.ToCompSensorFailConfig()));
 
-            PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/syssensorfail/config",
-                JsonConvert.SerializeObject(waterHeater.ToSysSensorFailConfig()));
-
-            PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/systemfail/config",
-                JsonConvert.SerializeObject(waterHeater.ToSystemFailConfig()));
-*/
             PublishAsync($"{Global.mqtt_discovery_prefix}/sensor/{waterHeater.DeviceText}/faultcodes/config",
                 JsonConvert.SerializeObject(waterHeater.ToFaultCodesConfig()));
         }
@@ -315,16 +300,11 @@ namespace EnergySmartBridge.Modules
             PublishAsync(waterHeater.ToTopic(Topic.raw_mode_state), waterHeater.Mode);
 
             PublishAsync(waterHeater.ToTopic(Topic.grid_state), waterHeater.Grid == "Disabled" ? "OFF" : "ON");
-//            PublishAsync(waterHeater.ToTopic(Topic.air_filter_status_state), waterHeater.AirFilterStatus == "OK" ? "ON" : "OFF");
-//            PublishAsync(waterHeater.ToTopic(Topic.condense_pump_fail_state), waterHeater.CondensePumpFail ? "ON" : "OFF");
             PublishAsync(waterHeater.ToTopic(Topic.leak_detect_state), waterHeater.LeakDetect == "NotDetected" ? "OFF" : "ON");
             PublishAsync(waterHeater.ToTopic(Topic.eco_error_state), waterHeater.EcoError ? "ON" : "OFF" );
 
             PublishAsync(waterHeater.ToTopic(Topic.leak_state), waterHeater.Leak.ToString());
             PublishAsync(waterHeater.ToTopic(Topic.master_disp_fail_state), waterHeater.MasterDispFail.ToString());
-//            PublishAsync(waterHeater.ToTopic(Topic.comp_sensor_fail_state), waterHeater.CompSensorFail.ToString());
-//            PublishAsync(waterHeater.ToTopic(Topic.sys_sensor_fail_state), waterHeater.SysSensorFail.ToString());
-//            PublishAsync(waterHeater.ToTopic(Topic.system_fail_state), waterHeater.SystemFail.ToString());
             PublishAsync(waterHeater.ToTopic(Topic.fault_codes_state), waterHeater.FaultCodes.ToString());
         }
 
