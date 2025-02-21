@@ -285,7 +285,7 @@ namespace EnergySmartBridge.Modules
                     ha_mode = "heat_pump";
                     break;
                 case "Vacation":
-                    ha_mode = "off";
+                    ha_mode = "eco";
                     break;
                 case "Standard":
                     ha_mode = "electric";
